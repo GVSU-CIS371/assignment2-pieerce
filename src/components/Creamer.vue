@@ -1,10 +1,15 @@
 <template>
-  <div class="froth">
-    <div v-for=" in 5" class="foam"></div>
+  <div class="froth" :class="type">
+    <div v-for="n in 5" :key="n" class="foam"></div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps({
+  type: String
+});
+</script>
+
 <style lang="scss" scoped>
 .froth {
   overflow: visible;
@@ -17,7 +22,7 @@
 }
 .foam {
   display: block;
-  background: #e4e0d2;
+  background: #fffdf7;
   border-radius: 30px;
   height: 40px;
   width: 40px;
@@ -54,4 +59,15 @@
   top: 2px;
   right: 10px;
 }
+
+.froth.Milk {
+  background-color: #fcf1f1;
+}
+.froth.Cream {
+  background-color: #ead9b1;
+}
+.froth.Half-And-Half {
+  background-color: #fff2d1;
+}
+
 </style>
