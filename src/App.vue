@@ -37,7 +37,7 @@
         <label for="creamerSelect">Creamer:</label>
         <select id="creamerSelect" v-model="selectedCreamer">
           <option value="No-Creamer"> No Creamer </option>
-          <option value="No-Milk"> Milk </option>
+          <option value="Milk"> Milk </option>
           <option value="Cream"> Cream </option>
           <option value="Half-And-Half"> Half & Half </option>
         </select>
